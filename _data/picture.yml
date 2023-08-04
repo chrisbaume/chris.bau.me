@@ -1,0 +1,6 @@
+presets:
+    default:
+        formats: [webp, original]
+        widths: [200, 400, 800, 1200, 1600]
+        size: 50vw
+        dimension_attributes: true

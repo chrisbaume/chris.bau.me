@@ -3,8 +3,10 @@ layout: default
 title: "Happy Jekylling!"
 ---
 
-## You're ready to go!
+## Chris Baume
 
 Start developing your Jekyll website.
 
-{% picture jpt-webp portrait.jpg --alt Portrait photo of Chris Baume %}
+<div style="width: 600px">
+{% picture portrait.jpg --alt Portrait photo of Chris Baume %}
+</div>
