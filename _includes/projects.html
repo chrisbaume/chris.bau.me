@@ -1,0 +1,13 @@
+{% assign filtered_projects = site.projects | where: "type",include.type %}
+<div class="projectGrid">
+{% for project in filtered_projects reversed %}
+<div class="project">
+    <div class="image">
+        <a href="{{ project.url }}">
+            {% picture {{ project.image }} --alt Portrait photo of Chris Baume %}
+        </a>
+    </div>
+    <div class="title">{{ project.title }}</div>
+</div>
+{% endfor %}
+</div>

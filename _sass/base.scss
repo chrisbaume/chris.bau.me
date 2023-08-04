@@ -12,3 +12,15 @@ img {
   width: 100%;
   height: auto;
 }
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  row-gap: 30px;
+}
+
+.project .image {
+  width: 300px;
+  height: auto;
+  border: 1px solid #ccc;
+}
