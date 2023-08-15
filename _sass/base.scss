@@ -1,92 +1,29 @@
-$backgroundColor: #ffffff;
-$bodyColor: #000000;
-$bodyFont: "DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+@charset "utf-8";
 
-body {
-  background: $backgroundColor;
-  color: $bodyColor;
-  font-family: $bodyFont;
-}
+// Customization
 
-#page {
-  margin-top: 3rem;
-  max-width: 980px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  display: flex;
-  flex-flow: row wrap;
-}
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
 
-#page-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
+/*
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
 
-#page-header ul li {
-  display: inline-block;
-  font-size: 1.5rem;
-  padding-left: 1rem;
-}
+// 2. Set your own initial variables
+// Update the blue shade, used for links
+$blue: #06bcef;
+// Add pink and its invert
+$pink: #ff8080;
+$pink-invert: #fff;
+// Update the sans-serif font family
+$family-sans-serif: "Helvetica", "Arial", sans-serif;
 
-#services ul {
-  display: grid;
-  padding: 0;
-  grid-template-columns: 245px 245px 245px 245px;
-  column-gap: 20px;
-  row-gap: 20px;
-}
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $pink;
+$primary-invert: $pink-invert;
 
-#services ul li {
-  display: inline-block;
-  text-align: center;
-}
+// 4. Import the rest of Bulma
+*/
 
-#portrait {
-  width: 600px;
-}
-
-div.section {
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  padding-left: 2rem;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-.outer {
-  display: grid;
-  grid-template-columns: 327px 653px;
-}
-
-.inner {
-  display: grid;
-  grid-template-columns: 327px 327px;
-  margin-top: 1rem;
-}
-
-.projectGrid {
-  display: grid;
-  grid-template-columns: 327px 327px 327px;
-  row-gap: 30px;
-}
-
-.project .image {
-  width: 300px;
-  height: auto;
-  border: 1px solid #ccc;
-}
+@import "../node_modules/bulma/bulma";

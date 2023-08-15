@@ -2,12 +2,8 @@
 layout: default
 title: "Chris Baume"
 ---
-
 {% include header.html %}
-
-<div id="projects" class="section">
-    <h2>Consumer</h2>
-    {% include projects.html type="consumer" %}
-    <h2>Professional</h2>
-    {% include projects.html type="professional" %}
-</div>
+{% include title.html %}
+{% include projects.html %}
+{% include services.html %}
+{%include footer.html %}

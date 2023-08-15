@@ -1,6 +1,6 @@
 ---
 title: Live digital programme notes
-image: bbc-notes.png
+image: notes.png
 type: consumer
 date: 2019-01-01
 ---

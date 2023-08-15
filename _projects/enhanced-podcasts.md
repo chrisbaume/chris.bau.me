@@ -1,6 +1,6 @@
 ---
 title: Enhanced podcasts player
-image: even-more-or-less.png
+image: enhanced-podcasts.png
 type: consumer
 date: 2019-01-01
 ---

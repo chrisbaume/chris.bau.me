@@ -1,13 +1,64 @@
-{% assign filtered_projects = site.projects | where: "type",include.type %}
-<div class="projectGrid">
-{% for project in filtered_projects reversed %}
-<div class="project">
-    <div class="image">
-        <a href="{{ project.url }}">
-            {% picture {{ project.image }} --alt Portrait photo of Chris Baume %}
-        </a>
+<section class="section">
+  <div class="container">
+    <h1 class="title">Projects</h1>
+    <nav class="breadcrumb has-bullet-separator is-centered" aria-label="breadcrumbs">
+      <ul>
+        <li class="is-active"><a href="#">All</a></li>
+        <li><a href="#">Consumer</a></li>
+        <li><a href="#">Professional</a></li>
+      </ul>
+    </nav>
+{% assign rows = site.projects.size | divided_by: 3.0 | ceil %}
+{% for i in (1..rows) %}
+    {% assign offset = forloop.index0 | times: 3 %}
+    <div class="columns">
+      {% for project in site.projects limit:3 offset:offset %}
+      <div class="column is-half is-one-third-desktop">
+        <div class="card-image">
+          <figure class="image is-1x1">
+            {% picture {{ project.image }} --alt {{ project.title }} %}
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-4">{{ project.title }}</p>
+              <p class="subtitle is-6">Subwoofer placement optimizer</p>
+            </div>
+          </div>
+          <div class="content">
+            A mobile app
+            <span class="tags">
+              <span class="tag">
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fa-brands fa-app-store-ios"></i>
+                  </span>
+                  <span>iOS</span>
+                </span>
+              </span>
+              <span class="tag">
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fa-brands fa-android"></i>
+                  </span>
+                  <span>Android</span>
+                </span>
+              </span>
+              <span class="tag">
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fa-brands fa-react"></i>
+                  </span>
+                  <span>React Native</span>
+                </span>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
     </div>
-    <div class="title">{{ project.title }}</div>
-</div>
 {% endfor %}
-</div>
+  </div>
+</section>

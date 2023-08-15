@@ -1,6 +1,19 @@
+media_queries:
+    mobile: 'max-width: 768px'
+    tablet: 'max-width: 1023px'
+    desktop: 'max-width: 1215px'
+    widescreen: 'max-width: 1407px'
+    fullhd: 'min-width: 1408px'
+
 presets:
     default:
         formats: [webp, original]
-        widths: [200, 400, 800, 1200, 1600]
-        size: 50vw
+        widths: [305, 370, 430, 512, 768]
         dimension_attributes: true
+        sizes:
+            mobile: 768px
+            tablet: 512px
+            desktop: 305px
+            widescreen: 370px
+            fullhd: 430px
+        size: 90vw
