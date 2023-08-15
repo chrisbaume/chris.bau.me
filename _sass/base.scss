@@ -8,14 +8,80 @@ body {
   font-family: $bodyFont;
 }
 
+#page {
+  margin-top: 3rem;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#page-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#page-header ul li {
+  display: inline-block;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+
+#services ul {
+  display: grid;
+  padding: 0;
+  grid-template-columns: 245px 245px 245px 245px;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+#services ul li {
+  display: inline-block;
+  text-align: center;
+}
+
+#portrait {
+  width: 600px;
+}
+
+div.section {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  padding-left: 2rem;
+}
+
 img {
   width: 100%;
   height: auto;
 }
 
+.outer {
+  display: grid;
+  grid-template-columns: 327px 653px;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 327px 327px;
+  margin-top: 1rem;
+}
+
 .projectGrid {
   display: grid;
-  grid-template-columns: 400px 400px 400px;
+  grid-template-columns: 327px 327px 327px;
   row-gap: 30px;
 }
 
