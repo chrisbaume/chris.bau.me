@@ -1,6 +1,9 @@
 ---
-title: Audio analysis and processing platform
+title: Aud-it
+subtitle: Privacy-focussed audio tool
 image: analysis.png
 type: professional
+tags: [{name: React, icon: fa-brands fa-react},
+       {name: WebAssembly}]
 ---
-Part of my PhD research
+Analyses audio/metadata and converts between audio formats, all in the browser.

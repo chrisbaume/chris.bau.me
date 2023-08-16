@@ -8,52 +8,43 @@
         <li><a href="#">Professional</a></li>
       </ul>
     </nav>
+{% assign reversed_projects = site.projects | reverse %}
 {% assign rows = site.projects.size | divided_by: 3.0 | ceil %}
 {% for i in (1..rows) %}
     {% assign offset = forloop.index0 | times: 3 %}
     <div class="columns">
-      {% for project in site.projects limit:3 offset:offset %}
+      {% for project in reversed_projects limit:3 offset:offset %}
       <div class="column is-half is-one-third-desktop">
         <div class="card-image">
           <figure class="image is-1x1">
-            {% picture {{ project.image }} --alt {{ project.title }} %}
+            {% picture project {{ project.image }} --alt {{ project.title }} %}
           </figure>
         </div>
         <div class="card-content">
-          <div class="media">
-            <div class="media-content">
-              <p class="title is-4">{{ project.title }}</p>
-              <p class="subtitle is-6">Subwoofer placement optimizer</p>
-            </div>
-          </div>
           <div class="content">
-            A mobile app
-            <span class="tags">
-              <span class="tag">
-                <span class="icon-text">
-                  <span class="icon">
-                    <i class="fa-brands fa-app-store-ios"></i>
+            <div class="block">
+              <p class="title is-4">{{ project.title }}</p>
+              <p class="subtitle is-5">{{ project.subtitle }}</p>
+            </div>
+            <div class="block">
+              {{ project.content }}
+            </div>
+            <div class="block">
+              <span class="tags">
+                {% for tag in project.tags %}
+                <span class="tag">
+                  <span class="icon-text">
+                    {% if tag.icon %}
+                    <span class="icon">
+                      <i class="{{ tag.icon }}"></i>
+                    </span>
+                    {% endif %}
+                    <span>{{ tag.name }}</span>
                   </span>
-                  <span>iOS</span>
                 </span>
+                {% endfor %}
               </span>
-              <span class="tag">
-                <span class="icon-text">
-                  <span class="icon">
-                    <i class="fa-brands fa-android"></i>
-                  </span>
-                  <span>Android</span>
-                </span>
-              </span>
-              <span class="tag">
-                <span class="icon-text">
-                  <span class="icon">
-                    <i class="fa-brands fa-react"></i>
-                  </span>
-                  <span>React Native</span>
-                </span>
-              </span>
-            </span>
+            </div>
           </div>
         </div>
       </div>
