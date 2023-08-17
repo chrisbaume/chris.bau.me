@@ -6,7 +6,7 @@ media_queries:
     fullhd: 'min-width: 1408px'
 
 presets:
-    project:
+    project_thumb:
         formats: [webp, original]
         widths: [305, 370, 432, 512, 768]
         dimension_attributes: true
@@ -19,4 +19,18 @@ presets:
             desktop: 30vw
             widescreen: 30vw
             fullhd: 432px
+        size: 90vw
+    project_full:
+        formats: [webp, original]
+        widths: [305, 370, 432, 512, 768]
+        dimension_attributes: true
+        format_quality:
+            webp: 75
+            jpg: 80
+        sizes:
+            mobile: 100vw
+            tablet: 80vw
+            desktop: 80vw
+            widescreen: 80vw
+            fullhd: 50vw
         size: 90vw

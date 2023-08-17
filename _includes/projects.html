@@ -1,5 +1,5 @@
 <section class="section">
-  <div class="container">
+  <div class="container is-10 is-offset-2">
     <h1 class="title">Projects</h1>
     <nav class="breadcrumb has-bullet-separator is-centered" aria-label="breadcrumbs">
       <ul>
@@ -8,48 +8,48 @@
         <li><a href="#">Professional</a></li>
       </ul>
     </nav>
-{% assign reversed_projects = site.projects | reverse %}
-{% assign rows = site.projects.size | divided_by: 3.0 | ceil %}
-{% for i in (1..rows) %}
-    {% assign offset = forloop.index0 | times: 3 %}
-    <div class="columns">
-      {% for project in reversed_projects limit:3 offset:offset %}
-      <div class="column is-half is-one-third-desktop">
-        <div class="card-image">
-          <figure class="image is-1x1">
-            {% picture project {{ project.image }} --alt {{ project.title }} %}
-          </figure>
-        </div>
-        <div class="card-content">
-          <div class="content">
-            <div class="block">
-              <p class="title is-4">{{ project.title }}</p>
-              <p class="subtitle is-5">{{ project.subtitle }}</p>
-            </div>
-            <div class="block">
-              {{ project.content }}
-            </div>
-            <div class="block">
-              <span class="tags">
-                {% for tag in project.tags %}
-                <span class="tag">
-                  <span class="icon-text">
-                    {% if tag.icon %}
-                    <span class="icon">
-                      <i class="{{ tag.icon }}"></i>
+    {% assign reversed_projects = site.projects | reverse %}
+    {% assign rows = site.projects.size | divided_by: 3.0 | ceil %}
+    {% for i in (1..rows) %}
+      {% assign offset = forloop.index0 | times: 3 %}
+      <div class="columns">
+        {% for project in reversed_projects limit:3 offset:offset %}
+        <div class="column is-half is-one-third-desktop">
+          <div class="card-image">
+            <figure class="image is-1x1">
+              {% picture project_thumb {{ project.image }} --alt {{ project.title }} %}
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <div class="block">
+                <p class="title is-4"><a href="{{ project.url }}">{{ project.title }}</a></p>
+                <p class="subtitle is-5">{{ project.subtitle }}</p>
+              </div>
+              <div class="block">
+                {{ project.content }}
+              </div>
+              <div class="block">
+                <span class="tags">
+                  {% for tag in project.tags %}
+                  <span class="tag">
+                    <span class="icon-text">
+                      {% if tag.icon %}
+                      <span class="icon">
+                        <i class="{{ tag.icon }}"></i>
+                      </span>
+                      {% endif %}
+                      <span>{{ tag.name }}</span>
                     </span>
-                    {% endif %}
-                    <span>{{ tag.name }}</span>
                   </span>
+                  {% endfor %}
                 </span>
-                {% endfor %}
-              </span>
+              </div>
             </div>
           </div>
         </div>
+      {% endfor %}
       </div>
     {% endfor %}
-    </div>
-{% endfor %}
   </div>
 </section>

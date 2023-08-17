@@ -1,4 +1,5 @@
 ---
+layout: project
 title: SubZone
 subtitle: Subwoofer placement optimizer
 image: subzone.png
