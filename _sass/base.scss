@@ -5,7 +5,7 @@
 // You can easily customize Bulma with your own variables.
 // Just uncomment the following block to see the result.
 
-/*
+
 // 1. Import the initial variables
 @import "../node_modules/bulma/sass/utilities/initial-variables";
 
@@ -20,10 +20,66 @@ $family-sans-serif: "Helvetica", "Arial", sans-serif;
 
 // 3. Set the derived variables
 // Use the new pink as the primary color
-$primary: $pink;
-$primary-invert: $pink-invert;
+$primary: #1dbfbe;
+$primary-invert: #ede7e3;
+$link: #1dbfbe;
+$title-color: #222e3a;
+$subtitle-color: #222e3a;
+$info: #1dbfbe;
+$background: #C9C9D4;
 
 // 4. Import the rest of Bulma
-*/
 
 @import "../node_modules/bulma/bulma";
+
+
+body {
+    font-family: 'Lexend', serif;
+}
+
+.navbar {
+    background-color: rgba(255,255,255,.6);
+    backdrop-filter: blur(5px);
+    padding-top: 0;
+}
+a.navbar-item:hover {
+    background-color: rgba(255,255,255,0);
+    color: rgba(0,0,0,1);
+}
+
+.navbar-end .navbar-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $primary;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.navbar-end .navbar-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+// https://codepen.io/sosuke/pen/Pjoqqp
+// .navbar-item img {
+//     max-height: 40px;
+    // filter: invert(35%) sepia(17%) saturate(3964%) hue-rotate(180deg) brightness(90%) contrast(82%);
+// }
+@include from(1024px) {
+    .navbar-item img {
+        max-height: 40px;
+    }
+}
+
+section.hero {
+    background-image: url('https://images.unsplash.com/photo-1605731414532-6b26976cc153?auto=format&fit=crop&q=80&w=1740&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+}
+
+section.no-top-padding {
+    padding-top: 0;
+}

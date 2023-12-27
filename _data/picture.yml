@@ -6,7 +6,7 @@ media_queries:
     fullhd: 'min-width: 1408px'
 
 presets:
-    project_thumb:
+    product_thumb:
         formats: [webp, original]
         widths: [305, 370, 432, 512, 768]
         dimension_attributes: true
@@ -20,7 +20,7 @@ presets:
             widescreen: 30vw
             fullhd: 432px
         size: 90vw
-    project_full:
+    product_full:
         formats: [webp, original]
         widths: [305, 370, 432, 512, 768]
         dimension_attributes: true
@@ -34,3 +34,35 @@ presets:
             widescreen: 80vw
             fullhd: 50vw
         size: 90vw
+    logo_navbar:
+        formats: [webp, original]
+        base_width: 40
+        pixel_ratios: [1, 1.5, 2]
+        fallback_width: 40
+        format_quality:
+            webp: 90
+    logo_footer:
+        formats: [webp, original]
+        base_width: 200
+        pixel_ratios: [1, 1.5, 2]
+        fallback_width: 200
+        format_quality:
+            webp: 90
+    app_store:
+        formats: [webp, original]
+        base_width: 220
+        pixel_ratios: [1, 1.5, 2]
+        fallback_width: 220
+        dimension_attributes: false
+        format_quality:
+            webp: 75
+            jpg: 80
+    play_store:
+        formats: [webp, original]
+        base_width: 220
+        pixel_ratios: [1, 1.5, 2]
+        fallback_width: 220
+        dimension_attributes: false
+        format_quality:
+            webp: 75
+            jpg: 80

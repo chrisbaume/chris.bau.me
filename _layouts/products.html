@@ -1,0 +1,54 @@
+---
+layout: default
+---
+{% include header.html %}
+<section class="section">
+    <div class="container is-10 is-offset-2">
+      <h1 class="title">Products</h1>
+      {% assign reversed_products = site.products | reverse %}
+      {% assign rows = site.products.size | divided_by: 3.0 | ceil %}
+      {% for i in (1..rows) %}
+        {% assign offset = forloop.index0 | times: 3 %}
+        <div class="columns is-centered">
+          {% for product in reversed_products limit:3 offset:offset %}
+          <div class="column is-half is-one-third-widescreen">
+            <div class="card-image">
+              <figure class="image is-1x1"><a href="{{ product.url }}">
+                {% picture product_thumb {{ product.image }} --alt {{ product.title }} %}
+              </a>
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <div class="block">
+                  <p class="title is-4"><a href="{{ product.url }}">{{ product.title }}</a></p>
+                  <p class="subtitle is-5">{{ product.subtitle }}</p>
+                </div>
+                <div class="block">
+                  {{ product.description }}
+                </div>
+                <div class="block">
+                  <span class="tags">
+                    {% for tag in product.tags %}
+                    <span class="tag is-white">
+                      <span class="icon-text">
+                        {% if tag.icon %}
+                        <span class="icon">
+                          <i class="{{ tag.icon }}"></i>
+                        </span>
+                        {% endif %}
+                        <span>{{ tag.name }}</span>
+                      </span>
+                    </span>
+                    {% endfor %}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+</section>
+{% include footer.html %}
