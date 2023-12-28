@@ -5,12 +5,9 @@ layout: default
 <section class="section">
     <div class="container is-10 is-offset-2">
       <h1 class="title">Portfolio</h1>
-      {% assign reversed_products = site.portfolio | reverse %}
-      {% assign rows = site.portfolio.size | divided_by: 3.0 | ceil %}
-      {% for i in (1..rows) %}
-        {% assign offset = forloop.index0 | times: 3 %}
-        <div class="columns is-centered">
-          {% for product in reversed_products limit:3 offset:offset %}
+      {% assign sorted = site.portfolio | sort:"order" %}
+        <div class="columns is-centered is-multiline">
+          {% for product in sorted %}
           <div class="column is-half is-one-third-desktop">
             <div class="card-image">
               <figure class="image is-1x1"><a href="{{ product.url }}">
@@ -46,9 +43,8 @@ layout: default
               </div>
             </div>
           </div>
-        {% endfor %}
+          {% endfor %}
         </div>
-      {% endfor %}
     </div>
 </section>
 {% include footer.html %}

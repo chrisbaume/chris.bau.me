@@ -6,6 +6,7 @@ description: Detects when your baby cries, then helps them back to sleep using s
 image: snug.png
 type: consumer
 date: 2022-01-01
+order: 2
 tags: [{name: Android, icon: fa-brands fa-android},
        {name: Kotlin}]
 ---

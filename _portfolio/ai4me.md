@@ -6,5 +6,6 @@ description: Auto-suggests chapters and highlights that can be edited and enhanc
 image: chapterise.png
 type: professional
 date: 2023-01-08
+order: 7
 tags: [{name: React, icon: fa-brands fa-react}]
 ---

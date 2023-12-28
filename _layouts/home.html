@@ -2,51 +2,44 @@
 layout: default
 ---
 {% include header.html %}
-<section class="hero is-primary">
+<section class="hero is-medium is-primary">
     <div class="hero-body">
       <div class="container">
-        <div class="columns is-vcentered">
-          <div class="column is-4 is-offset-2 has-text-right">
-            <!-- <p class="title is-1">
-              Sonic Baume
-            </p> -->
-            <h1 class="title is-1">
+        <section class="section">
+        <div class="columns is-centered is-vcentered is-5">
+          <div class="column is-two-thirds-desktop">
+            <h1 class="title is-1 is-spaced">
               Breaking barriers with sound
             </h1>
             <h4 class="subtitle is-4">
               We use innovation in audio technology to create a positive impact in people's lives
             </h4>
           </div>
-          <div class="column is-6">
-            {% picture product_full logo-large.png --alt Logo %}
-          </div>
         </div>
+        </section>
+        <section class="section">
+        <div class="columns is-centered is-vcentered">
+          <div class="column is-half-widescreen is-two-thirds-tablet">
+          <form class="box">
+            <label class="label is-large">Follow our journey</label>
+            <div class="field has-addons">
+              <div class="control has-icons-left is-expanded">
+                <input class="input is-medium" type="email" placeholder="Email">
+                <span class="icon is-left">
+                  <i class="fas fa-envelope fa-sm"></i>
+                </span>
+              </div>
+              <div class="control">
+                <a class="button is-info is-medium">
+                  Sign up
+                </a>
+              </div>
+            </div>
+            <p class="help">Something about the privacy policy</p>
+          </form>
+        </div>
+        </section>
       </div>
     </div>
   </section>
-  <section class="section">
-    <div class="columns is-centered">
-      <div class="column is-two-thirds-tablet is-half-desktop">
-        <h1 class="title">Follow our journey</h1>
-        <div class="content">
-          <p>Sign up to our newsletter to hear about new products and significant updates.</p>
-        </div>
-        <form class="box">
-          <div class="field has-addons">
-            <div class="control has-icons-left is-expanded">
-              <input class="input is-medium" type="email" placeholder="Email">
-              <span class="icon is-left">
-                <i class="fas fa-envelope fa-sm"></i>
-              </span>
-            </div>
-            <div class="control">
-              <a class="button is-info is-medium">
-                Sign up
-              </a>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-</section>
 {% include footer.html %}

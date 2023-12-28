@@ -18,7 +18,7 @@ presets:
             tablet: 45vw
             desktop: 30vw
             widescreen: 30vw
-            fullhd: 432px
+            fullhd: 30vw
         size: 90vw
     product_full:
         formats: [webp, original]

@@ -75,11 +75,19 @@ a.navbar-item:hover {
     }
 }
 
-section.hero {
-    background-image: url('https://images.unsplash.com/photo-1605731414532-6b26976cc153?auto=format&fit=crop&q=80&w=1740&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-size: cover;
-}
+// section.hero {
+//     background-image: url('https://images.unsplash.com/photo-1605731414532-6b26976cc153?auto=format&fit=crop&q=80&w=1740&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+//     background-size: cover;
+// }
 
 section.no-top-padding {
     padding-top: 0;
+}
+
+span.video-credit {
+    font-size: 0.75em;
+}
+
+p.video {
+    text-align: right;
 }
